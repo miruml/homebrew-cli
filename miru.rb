@@ -5,20 +5,20 @@
 class Miru < Formula
   desc "Configuration management for Robotics"
   homepage "https://docs.miruml.com"
-  version "0.3.9"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/miruml/cli/releases/download/v0.3.9/cli_Darwin_x86_64.tar.gz"
-      sha256 "f98195bf2cd79e8b7e57d00558489b9723d4abd02845488e47188ec15287422d"
+      url "https://github.com/miruml/cli/releases/download/v0.1.0/cli_Darwin_x86_64.tar.gz"
+      sha256 "5f794ac8f57720c0c46ea26601e0411dbe050374ed31c3b4210ae6790322c1c6"
 
       def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/miruml/cli/releases/download/v0.3.9/cli_Darwin_arm64.tar.gz"
-      sha256 "828701785ca745d40a90c4c458e80d372e251d2aa3a9e2a55c76068473104e9c"
+      url "https://github.com/miruml/cli/releases/download/v0.1.0/cli_Darwin_arm64.tar.gz"
+      sha256 "18601ead378c3c0cda11437be2ed15284db7d4c926d8a295d3c6520fa73bc00b"
 
       def install
         bin.install "miru"
@@ -29,8 +29,8 @@ class Miru < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/miruml/cli/releases/download/v0.3.9/cli_Linux_x86_64.tar.gz"
-        sha256 "b9d207a20e59b8898e510c719a01f5e52eb207c250e709d104ae2be1e87c8a34"
+        url "https://github.com/miruml/cli/releases/download/v0.1.0/cli_Linux_x86_64.tar.gz"
+        sha256 "e27e1b979c20cb8ef81dc313b0db1772f3c3fa50c33f58ac5280fd6c72e70c70"
 
         def install
           bin.install "miru"
@@ -39,8 +39,8 @@ class Miru < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/miruml/cli/releases/download/v0.3.9/cli_Linux_arm64.tar.gz"
-        sha256 "0a9650a358f4a290801b14ab97ca66f98a9cb1b28ca27ad8680196d0488608b2"
+        url "https://github.com/miruml/cli/releases/download/v0.1.0/cli_Linux_arm64.tar.gz"
+        sha256 "b3c72ba2ae0d11681c746074eb6190ffdc9bad6e127eb8d08c7b40ba875d27f4"
 
         def install
           bin.install "miru"
