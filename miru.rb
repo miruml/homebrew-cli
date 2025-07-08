@@ -5,20 +5,20 @@
 class Miru < Formula
   desc "Configuration management for Robotics"
   homepage "https://docs.miruml.com"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/miruml/cli/releases/download/v0.2.0/cli_Darwin_x86_64.tar.gz"
-      sha256 "a25165902e84c1d9f6fb23ea7d78d814ca51f9a881e051929a3f33bb34046616"
+      url "https://github.com/miruml/cli/releases/download/v0.3.0/cli_Darwin_x86_64.tar.gz"
+      sha256 "53104e6e6a3e97028cf3935ee0858172d22958ae16a572f6fb00183e685012bc"
 
       def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/miruml/cli/releases/download/v0.2.0/cli_Darwin_arm64.tar.gz"
-      sha256 "09e3be8e4b656a08df1c9aa5b763439bf850566a5ff41e4787ef0381fc446ec1"
+      url "https://github.com/miruml/cli/releases/download/v0.3.0/cli_Darwin_arm64.tar.gz"
+      sha256 "0cd887ed5c638eef971e914ccdb49b83dcc2244c39e3c3f74e6841b8a178c5d0"
 
       def install
         bin.install "miru"
@@ -27,24 +27,18 @@ class Miru < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/miruml/cli/releases/download/v0.2.0/cli_Linux_x86_64.tar.gz"
-        sha256 "0fc86ba3d9d99c8874da0d65622e6e118e0896432b42d42c131c79bc9e0466dd"
-
-        def install
-          bin.install "miru"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/miruml/cli/releases/download/v0.3.0/cli_Linux_x86_64.tar.gz"
+      sha256 "0bbaca300d3385462de43acb8f6ef384e7e63d0dc6fa0055a79cc06043c07ac1"
+      def install
+        bin.install "miru"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/miruml/cli/releases/download/v0.2.0/cli_Linux_arm64.tar.gz"
-        sha256 "15670f3bf48ba5647fab5c47532dc2d42b62ea9a9bc0f8c26c52d2aad9b14c5f"
-
-        def install
-          bin.install "miru"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/miruml/cli/releases/download/v0.3.0/cli_Linux_arm64.tar.gz"
+      sha256 "9ebf05914140ed50fc0cff661c983ecc7874f621ed601d701c0f637d99ee1ea3"
+      def install
+        bin.install "miru"
       end
     end
   end
