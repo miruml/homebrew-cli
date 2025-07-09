@@ -5,20 +5,20 @@
 class Miru < Formula
   desc "Configuration management for Robotics"
   homepage "https://docs.miruml.com"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/miruml/cli/releases/download/v0.3.0/cli_Darwin_x86_64.tar.gz"
-      sha256 "53104e6e6a3e97028cf3935ee0858172d22958ae16a572f6fb00183e685012bc"
+      url "https://github.com/miruml/cli/releases/download/v0.3.1/cli_Darwin_x86_64.tar.gz"
+      sha256 "86d87138417543746914ed1df1e04e8a28c3c0f8a7f473afe5c16eb009974fcb"
 
       def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/miruml/cli/releases/download/v0.3.0/cli_Darwin_arm64.tar.gz"
-      sha256 "0cd887ed5c638eef971e914ccdb49b83dcc2244c39e3c3f74e6841b8a178c5d0"
+      url "https://github.com/miruml/cli/releases/download/v0.3.1/cli_Darwin_arm64.tar.gz"
+      sha256 "e5d6b95143a616b7965356956ad5a12cb5c1c267fe12505269dcb785adea3dd9"
 
       def install
         bin.install "miru"
@@ -28,15 +28,15 @@ class Miru < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/miruml/cli/releases/download/v0.3.0/cli_Linux_x86_64.tar.gz"
-      sha256 "0bbaca300d3385462de43acb8f6ef384e7e63d0dc6fa0055a79cc06043c07ac1"
+      url "https://github.com/miruml/cli/releases/download/v0.3.1/cli_Linux_x86_64.tar.gz"
+      sha256 "f73d962831784f8d07c8ed6a1374556ee698967a36dfff9b5ed5a47d0e9b5b31"
       def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/miruml/cli/releases/download/v0.3.0/cli_Linux_arm64.tar.gz"
-      sha256 "9ebf05914140ed50fc0cff661c983ecc7874f621ed601d701c0f637d99ee1ea3"
+      url "https://github.com/miruml/cli/releases/download/v0.3.1/cli_Linux_arm64.tar.gz"
+      sha256 "6e3b9c61f45eb191cf1468db75f5e62e2aae4e8bc33a9bab81d56417adae9c8e"
       def install
         bin.install "miru"
       end
