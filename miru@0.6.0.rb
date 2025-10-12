@@ -10,7 +10,7 @@ class MiruAT060 < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/miruml/cli/releases/download/v0.6.0/cli_Darwin_x86_64.tar.gz"
-      sha256 "a776d5bc978ed0499cc69269629c3fce58c658dfd7976f367cc538187f2302c2"
+      sha256 "74ff83bcd6274ee5e57c2a9ca91d9682cd5bdbcc7c22955c1b1a8e2f84dd967e"
 
       def install
         bin.install "miru"
@@ -18,7 +18,7 @@ class MiruAT060 < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/miruml/cli/releases/download/v0.6.0/cli_Darwin_arm64.tar.gz"
-      sha256 "75bf9987373c85992075ad67d666c2e1f42e95a208b02ff2385c017f9e86eff2"
+      sha256 "d36d6d0d43480f84071eebaa84c264379b85eb8c7cf31729f7fb7296680077e5"
 
       def install
         bin.install "miru"
@@ -29,14 +29,14 @@ class MiruAT060 < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/miruml/cli/releases/download/v0.6.0/cli_Linux_x86_64.tar.gz"
-      sha256 "91751b89e85954b02b6096bba7cf697b5f6eb24894e7044fcb8178c34870d370"
+      sha256 "53d239d2bc81fad88708a0f1572b2f06f99ddc11018e634d9bb787f7f6b3b0de"
       def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/miruml/cli/releases/download/v0.6.0/cli_Linux_arm64.tar.gz"
-      sha256 "407d8e8bcd2d5d8ecbc5326f55ab8ace0965c90f25d96cb62a4108c2526a84d5"
+      sha256 "f5bdfaa2a8f28aba346f51fafdeca36e6bbdc132ffe1e06d41f32c9a3972763b"
       def install
         bin.install "miru"
       end
