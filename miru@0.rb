@@ -5,20 +5,20 @@
 class MiruAT0 < Formula
   desc "Configuration management for Robotics"
   homepage "https://docs.miruml.com"
-  version "0.6.3"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/miruml/cli/releases/download/v0.6.3/cli_Darwin_x86_64.tar.gz"
-      sha256 "ab565a8d3329ddb2bd85c2bad592550cbe2630e9523940ef15bc67d2d3f531e1"
+      url "https://github.com/miruml/cli/releases/download/v0.7.0/cli_Darwin_x86_64.tar.gz"
+      sha256 "0a9f5c122d084b3a3c63d0e335f7e5a2ea09fc32f865d72802296672b403e1aa"
 
       def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/miruml/cli/releases/download/v0.6.3/cli_Darwin_arm64.tar.gz"
-      sha256 "306036791639342af7d74b036a76666dde66d0e3856fa0ca4609633418113a8e"
+      url "https://github.com/miruml/cli/releases/download/v0.7.0/cli_Darwin_arm64.tar.gz"
+      sha256 "e54050b745f48243c885207b58796159c1474c0b26c3a530f0e2a1a304d8b4c9"
 
       def install
         bin.install "miru"
@@ -27,16 +27,16 @@ class MiruAT0 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/miruml/cli/releases/download/v0.6.3/cli_Linux_x86_64.tar.gz"
-      sha256 "c8d15b0f8661bfed9128f6bb9ccd10e008474b7c8c6d55d64760621c872946ef"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/miruml/cli/releases/download/v0.7.0/cli_Linux_x86_64.tar.gz"
+      sha256 "5a60c838bdace3bc084a9f3b1d27bf99304db4c2224a15b81534353ac28adf89"
       def install
         bin.install "miru"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/miruml/cli/releases/download/v0.6.3/cli_Linux_arm64.tar.gz"
-      sha256 "f1069de5054fd29570522670ee523e2b1b5971ae5625481eddb44619bcf8cdd4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/miruml/cli/releases/download/v0.7.0/cli_Linux_arm64.tar.gz"
+      sha256 "ed1fe439e4134bf6262a0e36405445599086ad2b4af39da5ff12218276bb88ea"
       def install
         bin.install "miru"
       end
